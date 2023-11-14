@@ -1,5 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
+import TailHeaderMenu from './common/TailHeaderMenu'
+import TailFooter from './common/TailFooter'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +13,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className="flex flex-col w-full max-w-screen-xl mx-auto h-screen">
+        <TailHeaderMenu />
+        <main className='grow flex flex-col justify-center items-center'>
+          {children}
+        </main>
+        <TailFooter />
+      </body>
     </html>
   )
 }

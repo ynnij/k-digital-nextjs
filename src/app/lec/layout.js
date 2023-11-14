@@ -3,6 +3,7 @@ import Link from "next/link";
 export default function LecLayout({ children }) {
     return (
         <main>
+            {/*
             <div className="p-10 flex h-12 justify-between items-center bg-slate-950 text-white">
                <div>리액트 수업자료</div>
                <nav>
@@ -13,6 +14,7 @@ export default function LecLayout({ children }) {
                 </ul>
                </nav>
             </div>
+            */}
             {children}
         </main>
     );
